@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PackageId>DockerNotifier</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Guðjón Jónsson</Authors>
+    <Description>Docker Notifier</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="dist\**" />
+    <Compile Remove="out\**" />
+    <EmbeddedResource Remove="dist\**" />
+    <EmbeddedResource Remove="out\**" />
+    <None Remove="dist\**" />
+    <None Remove="out\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Docker.DotNet" Version="2.124.3" />
+    <PackageReference Include="Refit" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>

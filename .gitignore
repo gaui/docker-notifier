@@ -1,0 +1,11 @@
+bin/
+obj/
+dist/
+*.user
+*.suo
+*.pdb
+*.log
+
+# Visual Studio 2015 cache/options directory
+.vs/
+.vscode/
