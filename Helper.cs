@@ -9,11 +9,8 @@ namespace DockerNotifier
         {
             string platform = Environment.GetEnvironmentVariable("PLATFORM");
 
-            if (new List<string> { "windows", "windows-tcp" }.Contains(platform))
-                return "tcp://localhost:2375";
-
-            if (platform == "windows-npipe")
-                return "npipe://./pipe/docker_engine";
+            if (platform == "windows")
+                return "tcp://docker.for.win.localhost:2375";
 
             return "unix://var/run/docker.sock";
         }
