@@ -15,19 +15,12 @@ docker run -d \
 
 ### Windows
 
-I haven't successfully tested this because of [this issue on my machine](https://github.com/Microsoft/Docker.DotNet/issues/220) but it should in theory work.
-
 ```
 docker run -d \
-    -p 2375:2375 \
     -e PLATFORM=windows
     -e SLACK.WEBHOOK_URL=https://hooks.slack.com/services/YOUR_ID \
     gaui/docker-notifier:latest
 ```
-
-#### Named pipes
-
-By default I use `tcp://localhost:2375` but if you want to used _named pipe_ you can specify environment variable `PLATFORM=windows-npipe`
 
 ## Contributors
 
@@ -41,4 +34,8 @@ By default I use `tcp://localhost:2375` but if you want to used _named pipe_ you
 
 ## Changelog
 
-### v0.1 initial release
+### v0.2.0
+
+- Fixed connection to Docker host for Windows platform
+
+### v0.1.0 initial release
