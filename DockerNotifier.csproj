@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Docker.DotNet" Version="2.124.3" />
-    <PackageReference Include="Refit" Version="3.1.0" />
+    <PackageReference Include="Refit" Version="4.7.51" />
   </ItemGroup>
 
   <ItemGroup>
